@@ -1,9 +1,6 @@
 <div style="text-align: center;">
     <h1>My Contacts</h1>
-    
-    {% comment %}
-      Move the "Add" button here, so it's always shown
-    {% endcomment %}
+
     <a href="{% url 'contact_create' %}" style="text-decoration: none; padding: 10px; background-color: #007bff; color: white; border-radius: 5px;">
         Add New Contact
     </a>
@@ -18,9 +15,6 @@
             </a>
         </li>
     {% empty %}
-        {% comment %}
-          This part is now *only* for the "no contacts" message
-        {% endcomment %}
         <p>No contacts found.</p>
     {% endfor %}
 </ul>
